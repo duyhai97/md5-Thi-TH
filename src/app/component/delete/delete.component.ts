@@ -35,13 +35,15 @@ export class DeleteComponent implements OnInit {
     this.booksService.delete(this.product.id)
       .subscribe(
         response => {
+          alert("Xóa thành công")
+          this.routers.navigate(['/list'])
           console.log(response);
 
         },
         error => {
           console.log(error);
         });
-    this.routers.navigate(['/list'])
+
   }
 
   exit(){
