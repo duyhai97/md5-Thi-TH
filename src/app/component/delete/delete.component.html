@@ -1,0 +1,16 @@
+<legend>Delete Book</legend>
+<table>
+  <tr>
+    <td>Name: </td><br>
+    <td>{{product.title}}</td>
+  </tr>
+  <tr>
+    <td>Author:</td><br>
+    <td>{{product.author}}</td>
+  </tr>
+
+</table><br>
+<div class="col-12">
+  <button class="btn btn-primary" (click)="deleteBook()">Delete</button> &nbsp;&nbsp;
+  <button  class="btn btn-primary" (click)="exit()">Exit</button>
+</div>

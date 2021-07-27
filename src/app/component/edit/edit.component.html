@@ -1,0 +1,24 @@
+<h1>Edit book</h1>
+
+<form [formGroup]="bookForm" (ngSubmit)="editBook()">
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Book name</label>
+    <input type="text" class="form-control" id="formGroupExampleInput"
+           formControlName="title" style=" width: 500px">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Author</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2"
+           formControlName="author" style=" width: 500px">
+  </div>
+
+  <div class="mb-3">
+    <label for="formGroupExampleInput3" class="form-label">Description</label>
+    <textarea type="text" class="form-control" id="formGroupExampleInput3"
+              formControlName="description" style=" width: 500px; height: 150px"></textarea>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Edit</button> &nbsp;&nbsp;&nbsp;
+    <button type="submit" class="btn btn-primary" (click)="exit()">Exit</button>
+  </div>
+</form>
